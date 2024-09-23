@@ -1,0 +1,32 @@
+---
+
+- hosts: dockerall
+  
+  ignore_errors: yes
+  become: true
+  
+  gather_facts: yes
+  tasks:
+    - name: test connection
+      ping:
+
+#    - name: Prune everything (including non-dangling images)
+#      docker_prune:
+#        containers: yes
+#        images: yes
+#        images_filters:
+#          dangling: false
+#        networks: yes
+#        volumes: yes
+#        builder_cache: yes 
+
+    - name: prune non-dangling images
+      community.docker.docker_prune:
+        containers: false
+        images: true
+        images_filters:
+          dangling: false
+        networks: false
+        volumes: false
+        builder_cache: false
+
