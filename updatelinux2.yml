@@ -1,6 +1,6 @@
 ---
 - hosts: all
-    ansible_python_interpreter: /usr/bin/python3
+#    ansible_python_interpreter: /usr/bin/python3
   become: true
   tasks:
     - name: Upgrade the OS (apt-get dist-upgrade)
