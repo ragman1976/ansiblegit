@@ -4,5 +4,5 @@
   become: true
   tasks:
     - name: Upgrade the OS (apt-get dist-upgrade)
-    ansible.builtin.apt:
-    upgrade: dist
+      ansible.builtin.apt:
+        upgrade: dist
