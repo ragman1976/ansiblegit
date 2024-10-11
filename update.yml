@@ -1,5 +1,5 @@
 ---
-- hosts: all
+- hosts: [alllinux]
   become: true
   tasks:
     - name: Update apt repo and cache on all Debian/Ubuntu boxes
