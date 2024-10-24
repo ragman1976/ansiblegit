@@ -1,4 +1,4 @@
-- hosts: dockerall
+- hosts: test
   
   ignore_errors: yes
   become: true
