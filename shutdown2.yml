@@ -1,0 +1,16 @@
+- hosts: shutdown2
+  
+  ignore_errors: yes
+  become: true
+  
+  gather_facts: yes
+  tasks:
+    - name: test connection
+      ping:
+
+    - name: Unconditionally shut down the machine with all defaults
+      community.general.shutdown:
+
+#    - name: Delay shutting down the remote node
+#      community.general.shutdown:
+#        delay: 60
