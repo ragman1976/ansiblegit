@@ -1,4 +1,4 @@
-- hosts: shutdown2
+- hosts: shutdown
   
   ignore_errors: yes
   become: true
